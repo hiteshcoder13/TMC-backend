@@ -7,7 +7,11 @@ const Checker = require('./Checker');
 const Institute = require('./Institute');
 const Assignment = require('./Assignment');
 
-app.use(cors());
+app.use(cors({
+    origin: '*', // Or specify the allowed origins
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type'
+}));
 app.use(express.json());
 
 // Get all registered users (for testing or other purposes)
