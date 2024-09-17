@@ -1,12 +1,9 @@
-
-
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/TMC").then(()=>{
+mongoose.connect("mongodb+srv://hiteshnagpal:Hunnynagpal%402006@cluster0.jzero.mongodb.net/TMC?retryWrites=true&w=majority").then(()=>{
     console.log("db success")
 }).catch((e)=>{
     console.log(e)
 });
-
 const assignmentSchema = new mongoose.Schema({
     assignmentId: { type: String, required: true },
     packetNo: { type: String, required: true },
